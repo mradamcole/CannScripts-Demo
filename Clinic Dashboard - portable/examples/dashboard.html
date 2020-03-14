@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+<link href=../mc_leaf.png rel=icon type=image/png> <meta content="IE=edge,chrome=1" http-equiv=X-UA-Compatible>
+<title>LP Dashboard by HealthChain</title>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no" name=viewport>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel=stylesheet>
+<link href=https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css rel=stylesheet>
+<link href=../assets/css/bootstrap.min.css rel=stylesheet>
+<link href="../assets/css/pa.css?v=2.0.0" rel=stylesheet>
+<link href=../assets/demo/demo.css rel=stylesheet>
+<div class=wrapper>
+  <div class=sidebar data-active-color=success data-color=green>
+    <div class=logo><a href=http://www.healthchain.ca class="simple-text logo-mini">
+        <div class=logo-image-small><img src=../assets/img/marijuanaleaf.png> </div> </a> <a
+            href=http://www.healthchain.ca class="simple-text logo-normal">CanScripts
+      </a></div>
+    <div class=sidebar-wrapper>
+      <ul class=nav>
+        <li class=active><a href=./dashboard.html>  <img src=../assets/img/dashboard.png height=30
+            style=filter:invert(70%) width=30>    Dashboard</a>
+        <li><a href=./prescribe.html>  <img src=../assets/img/prescribe.png height=30 style=filter:invert(70%)
+            width=30>    Prescribe</a>
+        <li><a href=./videoconf.html>  <img src=../assets/img/videoconf.png height=30 style=filter:invert(70%)
+            width=30>    Video consult</a>
+        <li><a href=./onboard.html>  <img src=../assets/img/onboard.png height=30 style=filter:invert(70%) width=30>   
+            Patient profile</a>
+        <li><a href=./schedule.html>  <img src=../assets/img/schedule.png height=30 style=filter:invert(70%)
+            width=30>    Scheduling</a>
+        <li><a href=./settings.html>  <img src=../assets/img/settings.png height=30 style=filter:invert(70%)
+            width=30>    Configure</a>
+        <li class=active-pro><a href=http://www.healthchain.ca> <img src=../assets/img/hclogo.png height=20
+            style=filter:grayscale(100%) width=40>   <span style=font-size:10px>Powered by HealthChain</span></a>
+      </ul>
+    </div>
+  </div>
+  <div class=main-panel>
+    <nav class="fixed-top navbar navbar-absolute navbar-expand-lg navbar-transparent">
+      <div class=container-fluid>
+        <div class=navbar-wrapper>
+          <div class=navbar-toggle><button class=navbar-toggler type=button><span
+                class="navbar-toggler-bar bar1"></span> <span class="navbar-toggler-bar bar2"></span> <span
+                class="navbar-toggler-bar bar3"></span></button></div><a href=#pablo class=navbar-brand>Dashboard for
+            Oct 24, 2019</a>
+        </div><button class=navbar-toggler type=button aria-controls=navigation-index aria-expanded=false
+          aria-label="Toggle navigation" data-target=#navigation data-toggle=collapse><span
+            class="navbar-toggler-bar navbar-kebab"></span> <span class="navbar-toggler-bar navbar-kebab"></span> <span
+            class="navbar-toggler-bar navbar-kebab"></span></button>
+        <div class="collapse justify-content-end navbar-collapse" id=navigation>
+          <form>
+            <div class="input-group no-border"><input class=form-control placeholder="Lookup patient...">
+              <div class=input-group-append>
+                <div class=input-group-text><i class="nc-icon nc-zoom-split"></i></div>
+              </div>
+            </div>
+          </form>
+          <ul class=navbar-nav>
+            <li class=nav-item><a href=#HealthChain class="nav-link btn-magnify"><i class="nc-icon nc-layout-11"></i>
+                <p><span class="d-lg-none d-md-block">Stats</span></p>
+              </a>
+            <li class="nav-item btn-rotate dropdown"><a href=http://www.healthchain.ca class="nav-link dropdown-toggle"
+                aria-expanded=false aria-haspopup=true data-toggle=dropdown id=navbarDropdownMenuLink><i
+                  class="nc-icon nc-bell-55"></i>
+                <p><span class="d-lg-none d-md-block">Rx pipeline</span></p>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby=navbarDropdownMenuLink><a href=#
+                  class=dropdown-item>Patient unanswered messages (7)</a> <a href=# class=dropdown-item>Patients to be
+                  scheduled (4)</a> <a href=# class=dropdown-item>Doctor referrals to be processed (2)</a></div>
+            <li class=nav-item><a href=#HealthChain class="nav-link btn-rotate"><i
+                  class="nc-icon nc-settings-gear-65"></i>
+                <p><span class="d-lg-none d-md-block">HealthChain settings</span></p>
+              </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class=content>
+      <div class=row>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card card-stats">
+            <div class=card-body>
+              <div class=row>
+                <div class="col-md-4 col-5">
+                  <div class="icon-big icon-warning text-center"><i class="nc-icon nc-diamond text-warning"></i></div>
+                </div>
+                <div class="col-md-8 col-7">
+                  <div class=numbers>
+                    <p class=card-category>Conversion<p class=card-title>36%<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=card-footer>
+              <hr>
+              <div class=stats><i class="fa fa-calendar-o"></i> This month</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card card-stats">
+            <div class=card-body>
+              <div class=row>
+                <div class="col-md-4 col-5">
+                  <div class="icon-big icon-warning text-center"><i class="nc-icon nc-money-coins text-success"></i>
+                  </div>
+                </div>
+                <div class="col-md-8 col-7">
+                  <div class=numbers>
+                    <p class=card-category>Sales today<p class=card-title>$ 12,545<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=card-footer>
+              <hr>
+              <div class=stats><i class="fa fa-refresh"></i> Update now</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card card-stats">
+            <div class=card-body>
+              <div class=row>
+                <div class="col-md-4 col-5">
+                  <div class="icon-big icon-warning text-center"><i class="nc-icon nc-single-02 text-danger"></i></div>
+                </div>
+                <div class="col-md-8 col-7">
+                  <div class=numbers>
+                    <p class=card-category>Patients today<p class=card-title>23<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=card-footer>
+              <hr>
+              <div class=stats><i class="fa fa-refresh"></i> Update now</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 col-sm-6">
+          <div class="card card-stats">
+            <div class=card-body>
+              <div class=row>
+                <div class="col-md-4 col-5">
+                  <div class="icon-big icon-warning text-center"><i class="nc-icon nc-favourite-28 text-primary"></i>
+                  </div>
+                </div>
+                <div class="col-md-8 col-7">
+                  <div class=numbers>
+                    <p class=card-category>NPS<p class=card-title>+47<p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class=card-footer>
+              <hr>
+              <div class=stats><i class="fa fa-clock-o"></i> All time</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=row>
+        <div class=col-md-12>
+          <div class=card>
+            <div class=card-header>
+              <h5 class=card-title>Conversion funnel</h5>
+              <p class=card-category>Year to date
+            </div>
+            <div class=card-body><canvas id=chartHours height=100 width=400></canvas></div>
+            <div class=card-footer>
+              <hr>
+              <div class=stats>
+                <div class=row>
+                  <div class=col-sm-auto><i class="fa fa-history"></i> Updated 14 hours ago     |</div>
+                  <div class=col-sm-auto>
+                    <div
+                      style=background-color:#fcf468;width:16px;height:16px;display:inline-block;vertical-align:middle>
+                    </div>
+                    <div style=display:inline-block;vertical-align:middle;font-size:smaller> Website visits</div>
+                  </div>
+                  <div class=col-sm-auto>
+                    <div
+                      style=background-color:#abf088;width:16px;height:16px;display:inline-block;vertical-align:middle>
+                    </div>
+                    <div style=display:inline-block;vertical-align:middle;font-size:smaller> Appointments scheduled
+                    </div>
+                  </div>
+                  <div class=col-sm-auto>
+                    <div
+                      style=background-color:#6bd098;width:16px;height:16px;display:inline-block;vertical-align:middle>
+                    </div>
+                    <div style=display:inline-block;vertical-align:middle;font-size:smaller> Orders placed</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=row>
+        <div class=col-md-4>
+          <div class="card card-chart">
+            <div class=card-header>
+              <h5 class=card-title>Today's Statistics</h5>
+              <p class=card-category>Virtual consult breakdown
+            </div>
+            <div class=card-body><canvas id=chartEmail></canvas></div>
+            <div class=card-footer>
+              <div class=legend><i class="fa fa-circle" style=color:#6bd098></i> <span style=font-size:smaller>New,
+                  scheduled</span> <i class="fa fa-circle" style=color:#abf088></i> <span style=font-size:smaller>New,
+                  JIT</span> <i class="fa fa-circle" style=color:#fcf468></i> <span
+                  style=font-size:smaller>Renewal</span> <i class="fa fa-circle" style=color:#fbc658></i> <span
+                  style=font-size:smaller>Cancelled</span></div>
+              <hr>
+              <div class=stats><i class="fa fa-calendar"></i> See trending report</div>
+            </div>
+          </div>
+        </div>
+        <div class=col-md-8>
+          <div class="card card-chart">
+            <div class=card-header>
+              <h5 class=card-title>Product sales</h5>
+              <p class=card-category>Year to date sales by revenue ($000)
+            </div>
+            <div class=card-body><canvas id=speedChart height=100 width=400></canvas></div>
+            <div class=card-footer>
+              <div class=chart-legend><i class="fa fa-circle" style=color:#6bd098></i> <span
+                  style=font-size:smaller>Rise and Relax Tilray Bundle</span> <i class="fa fa-circle"
+                  style=color:#abf088></i> <span style=font-size:smaller>125 CBD Oil</span> <i class="fa fa-circle"
+                  style=color:#fcf468></i> <span style=font-size:smaller>Green Valley Cush</span></div>
+              <hr>
+              <div class=card-stats><i class="fa fa-calendar"></i> See today's sales</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class=row>
+        <div class=col-md-6>
+          <div class="card card-chart">
+            <div class=card-header>
+              <h5 class=card-title>Top 10 products</h5>
+              <p class=card-category>Volume and revenue analysis
+            </div>
+            <div class=card-body>
+              <div class=toolbar></div>
+              <table cellspacing=0 class="table table-bordered table-striped" id=datatable style=font-size:13px
+                width=100%>
+                <thead>
+                  <tr>
+                    <th style=font-size:12px>Product
+                    <th style=font-size:12px>Pts (#)
+                    <th style=font-size:12px>Monthly ($)
+                    <th style=font-size:12px>Avg Pt LTV ($)
+                <tbody id=hc_productTbl>
+              </table>
+            </div>
+          </div>
+        </div>
+        <div class=col-md-6>
+          <div class="card card-chart">
+            <div class=card-header>
+              <h5 class=card-title>Top 10 indications</h5>
+              <p class=card-category>Volume and revenue analysis
+            </div>
+            <div class=card-body>
+              <div class=toolbar></div>
+              <table cellspacing=0 class="table table-bordered table-striped" id=datatable style=font-size:13px
+                width=100%>
+                <thead>
+                  <tr>
+                    <th style=font-size:12px>Indication
+                    <th style=font-size:12px>Pts (#)
+                    <th style=font-size:12px>Monthly ($)
+                    <th style=font-size:12px>Avg Pt LTV ($)
+                <tbody id=hc_indicationTbl>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>function hc_table(ar) {
+        let s = "";
+        let hcPts = 9999;
+        for (let i = 0; i < ar.length; i++) {
+          let hcName = ar[i];
+          hcPts = Math.floor(Math.random() * hcPts) + (20 - i) * 3;
+          let hcLTV = Math.floor(Math.random() * 3000) + 500;
+          let hcMon = Math.floor(hcLTV / 24 * hcPts);
+          s += "<tr style='line-height: 5px;'><td>" + hcName + "</td><td style='text-align: right;'>" + hcPts.toLocaleString() + "</td><td style='text-align: right;'>" + hcMon.toLocaleString() + "</td><td style='text-align: right;'>" + hcLTV.toLocaleString() + "</td></tr>"
+        }
+        return s;
+      }
+      let list = "Zen Berry,Citrus Punch,Lemon Riot,Topical Bliss,Twilight,CBD 1:1,CBD 2:1,CBD 20:1,Daydream,Pillow Talk".split(",");
+      document.getElementById("hc_productTbl").innerHTML = hc_table(list);
+      list = "Chronic pain,Cancer,Osteoarthritis,Rheumatoid arthritis,HIV/AIDS,Insomnia,Headaches/migraines,Anxiety/stress,Multiple sclerosis,Post-traumatic stress disorder".split(",");
+      document.getElementById("hc_indicationTbl").innerHTML = hc_table(list);</script>
+  </div>
+  <footer class="footer footer-black footer-white">
+    <div class=container-fluid>
+      <div class=row>
+        <nav class=footer-nav>
+          <ul>
+            <li><a href=https://www.healthchain.ca target=_blank>HealthChain</a>
+            <li><a href=https://www.healthchain.ca target=_blank>Blog</a>
+            <li><a href=https://www.healthchain.ca target=_blank>Licenses</a>
+          </ul>
+        </nav>
+        <div class="credits ml-auto"><span class=copyright>©
+            <script>document.write((new Date).getFullYear())</script>, HealthChain Inc.</span></div>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src=../assets/js/core/jquery.min.js> </script> <script src=../assets/js/core/popper.min.js> </script> <script
+  src=../assets/js/core/bootstrap.min.js> </script> <script src=../assets/js/plugins/perfect-scrollbar.jquery.min.js>
+  </script> <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+<script src=../assets/js/plugins/chartjs.min.js> </script> <script src=../assets/js/plugins/bootstrap-notify.js>
+</script> <script src="../assets/js/pa.min.js?v=2.0.0"></script>
+<script src=../assets/demo/demo.js> </script> <script>$(document).ready(function () { demo.initChartsPages() })</script>

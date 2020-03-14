@@ -1,0 +1,117 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<title>jQuery Tags-input Basic Example</title>
+<link href='http://fonts.googleapis.com/css?family=Roboto+Condensed' rel='stylesheet' type='text/css'>
+<link href="tags.css" rel="stylesheet">
+<style>
+    .container { margin: 250px auto; }
+        /*
+        Custom styles go here
+         */
+        #myTags {
+            box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+            padding: 3px 0px 3px 3px;
+            margin: 5px 1px 3px 0px;
+            border: 1px solid rgba(81, 203, 238, 1);
+        }
+
+        .container{
+            width: 70%;
+        }
+
+        body{
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .attachment-full{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+        }
+    </style>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+</head>
+
+<body><div id="jquery-script-menu">
+<div class="jquery-script-center">
+<ul>
+<li><a href="https://www.jqueryscript.net/form/tags-input-autocomplete-ajax.html">Download This Plugin</a></li>
+<li><a href="https://www.jqueryscript.net/">Back To jQueryScript.Net</a></li>
+</ul>
+<div class="jquery-script-ads"><script type="text/javascript"><!--
+google_ad_client = "ca-pub-2783044520727903";
+/* jQuery_demo */
+google_ad_slot = "2780937993";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="https://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script></div>
+<div class="jquery-script-clear"></div>
+</div>
+</div>
+    <div class="container">
+        <h1>jQuery Tags-input Basic Example</h1>
+        <div class="tags-input" id="myTags">
+                <span class="data">
+                    <span class="tag"><span class="text" _value="Nairobi 047">jQuery</span><span class="close">&times;</span></span>
+                    <span class="tag"><span class="text" _value="24">Script</span><span class="close">&times;</span></span>
+                </span>
+
+                    <span class="autocomplete">
+                    <input type="text">
+                    <div class="autocomplete-items">
+                    </div>
+                </span>
+            </div>
+    </div>
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha384-nvAa0+6Qg9clwYCGGPpDQLVpLNn0fRaROjHqs13t4Ggj3Ez50XnGQqc/r8MhnRDZ" crossorigin="anonymous"></script>
+<script src="tags.js"></script>
+<script>
+    $(function () {
+
+                console.log($('#myTags').tagsValues())
+
+
+            })
+
+            function runSuggestions(element,query) {
+
+                /*
+                using ajax to populate suggestions
+                 */
+                let sug_area=$(element).parents().eq(2).find('.autocomplete .autocomplete-items');
+                $.getJSON("data.json", function( data ) {
+                    _tag_input_suggestions_data = data;
+                    $.each(data,function (key,value) {
+                        let template = $("<div>"+value.name+"</div>").hide()
+                        sug_area.append(template)
+                        template.show()
+
+                    })
+                });
+
+            }
+        </script>
+        <script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-36251023-1']);
+  _gaq.push(['_setDomainName', 'jqueryscript.net']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</body>
+</html>

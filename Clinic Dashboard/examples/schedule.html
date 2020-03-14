@@ -1,0 +1,784 @@
+<!--
+=========================================================
+ Paper Dashboard 2 - v2.0.0
+=========================================================
+
+ Product Page: https://www.creative-tim.com/product/paper-dashboard-2
+ Copyright 2019 Creative Tim (https://www.creative-tim.com)
+ Licensed under MIT (https://github.com/creativetimofficial/paper-dashboard/blob/master/LICENSE)
+
+ Coded by Creative Tim
+
+=========================================================
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="../assets/img/favicon.png">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>
+    LP Dashboard by HealthChain
+  </title>
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" rel="stylesheet">
+  <!-- CSS Files -->
+  <link href="../assets/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="../assets/css/paper-dashboard.css?v=2.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="../assets/demo/demo.css" rel="stylesheet" />
+  <!-- FullCalendar -->
+  <link href='../../fullcalendar-scheduler-4.3.1/packages/core/main.css' rel='stylesheet' />
+  <link href='../../fullcalendar-scheduler-4.3.1/packages/daygrid/main.css' rel='stylesheet' />
+  <link href='../../fullcalendar-scheduler-4.3.1/packages/timegrid/main.css' rel='stylesheet' />
+  <script src='../../fullcalendar-scheduler-4.3.1/packages/core/main.js'></script>
+  <script src='../../fullcalendar-scheduler-4.3.1/packages/interaction/main.js'></script>
+  <script src='../../fullcalendar-scheduler-4.3.1/packages/daygrid/main.js'></script>
+  <script src='../../fullcalendar-scheduler-4.3.1/packages/timegrid/main.js'></script>
+  <script src='../../fullcalendar-scheduler-4.3.1/packages-premium/resource-common/main.js'></script>
+  <script src='../../fullcalendar-scheduler-4.3.1/packages-premium/resource-daygrid/main.js'></script>
+  <script src='../../fullcalendar-scheduler-4.3.1/packages-premium/resource-timegrid/main.js'></script>
+  <script>
+
+//pathetic/quick/dirty method of faking names. (Sorry to the programming gods)
+const fakeNames = {
+  "items": [
+  {
+  "name": "Sandy",
+  "surname": "Jenkins"
+  },
+  {
+  "name": "Vanessa",
+  "surname": "Puckett"
+  },
+  {
+  "name": "Ricky",
+  "surname": "Freedman"
+  },
+  {
+  "name": "Barry",
+  "surname": "Bowling"
+  },
+  {
+  "name": "Leo",
+  "surname": "Hewitt"
+  },
+  {
+  "name": "Florence",
+  "surname": "Waters"
+  },
+  {
+  "name": "Mary",
+  "surname": "Dunlap"
+  },
+  {
+  "name": "Ross",
+  "surname": "Dillon"
+  },
+  {
+  "name": "Bob",
+  "surname": "Rowland"
+  },
+  {
+  "name": "Rhonda",
+  "surname": "Graham"
+  },
+  {
+  "name": "Sherri",
+  "surname": "Stanley"
+  },
+  {
+  "name": "Steve",
+  "surname": "Gilbert"
+  },
+  {
+  "name": "Tom",
+  "surname": "Chang"
+  },
+  {
+  "name": "Glenda",
+  "surname": "Sawyer"
+  },
+  {
+  "name": "Allen",
+  "surname": "Cash"
+  },
+  {
+  "name": "Gilbert",
+  "surname": "Waller"
+  },
+  {
+  "name": "Bonnie",
+  "surname": "Desai"
+  },
+  {
+  "name": "Shannon",
+  "surname": "Cates"
+  },
+  {
+  "name": "Charlotte",
+  "surname": "Aldridge"
+  },
+  {
+  "name": "Bob",
+  "surname": "Monroe"
+  },
+  {
+  "name": "Jordan",
+  "surname": "Hawkins"
+  },
+  {
+  "name": "Ashley",
+  "surname": "Bolton"
+  },
+  {
+  "name": "Caroline",
+  "surname": "Carroll"
+  },
+  {
+  "name": "Randall",
+  "surname": "Anderson"
+  },
+  {
+  "name": "Gregory",
+  "surname": "Raynor"
+  },
+  {
+  "name": "Calvin",
+  "surname": "Brennan"
+  },
+  {
+  "name": "Jerome",
+  "surname": "Graves"
+  },
+  {
+  "name": "Jack",
+  "surname": "Love"
+  },
+  {
+  "name": "Hannah",
+  "surname": "Abrams"
+  },
+  {
+  "name": "Brooke",
+  "surname": "Waller"
+  },
+  {
+  "name": "Martha",
+  "surname": "Justice"
+  },
+  {
+  "name": "Dan",
+  "surname": "Harrell"
+  },
+  {
+  "name": "Glen",
+  "surname": "Blanchard"
+  },
+  {
+  "name": "Karen",
+  "surname": "Gray"
+  },
+  {
+  "name": "Harvey",
+  "surname": "Gibson"
+  },
+  {
+  "name": "Vivian",
+  "surname": "Blair"
+  },
+  {
+  "name": "Jon",
+  "surname": "Ford"
+  },
+  {
+  "name": "Martin",
+  "surname": "Coates"
+  },
+  {
+  "name": "Gretchen",
+  "surname": "Pitts"
+  },
+  {
+  "name": "Kelly",
+  "surname": "Clements"
+  },
+  {
+  "name": "Calvin",
+  "surname": "Lowry"
+  },
+  {
+  "name": "Wesley",
+  "surname": "Richmond"
+  },
+  {
+  "name": "Martha",
+  "surname": "Norman"
+  },
+  {
+  "name": "Guy",
+  "surname": "Scarborough"
+  },
+  {
+  "name": "Hannah",
+  "surname": "Katz"
+  },
+  {
+  "name": "Beth",
+  "surname": "McGuire"
+  },
+  {
+  "name": "Danny",
+  "surname": "Barton"
+  },
+  {
+  "name": "Gina",
+  "surname": "Burgess"
+  },
+  {
+  "name": "Vivian",
+  "surname": "Hardison"
+  },
+  {
+  "name": "Walter",
+  "surname": "Lin"
+  },
+  {
+  "name": "Stephen",
+  "surname": "McNamara"
+  },
+  {
+  "name": "Barbara",
+  "surname": "Roth"
+  },
+  {
+  "name": "Glenn",
+  "surname": "Lawrence"
+  },
+  {
+  "name": "Clifford",
+  "surname": "Nance"
+  },
+  {
+  "name": "Wesley",
+  "surname": "Haynes"
+  },
+  {
+  "name": "Scott",
+  "surname": "Holland"
+  },
+  {
+  "name": "Erica",
+  "surname": "Horowitz"
+  },
+  {
+  "name": "Regina",
+  "surname": "Hensley"
+  },
+  {
+  "name": "Gloria",
+  "surname": "Hendrix"
+  },
+  {
+  "name": "Mike",
+  "surname": "Jernigan"
+  },
+  {
+  "name": "Dan",
+  "surname": "Bowles"
+  },
+  {
+  "name": "Lloyd",
+  "surname": "Owen"
+  },
+  {
+  "name": "Nathan",
+  "surname": "Vaughn"
+  },
+  {
+  "name": "Jeff",
+  "surname": "Hu"
+  },
+  {
+  "name": "Jordan",
+  "surname": "Marsh"
+  },
+  {
+  "name": "Gilbert",
+  "surname": "Stephens"
+  },
+  {
+  "name": "Martha",
+  "surname": "Robinson"
+  },
+  {
+  "name": "Brooke",
+  "surname": "Scarborough"
+  },
+  {
+  "name": "Caroline",
+  "surname": "Wagner"
+  },
+  {
+  "name": "Dennis",
+  "surname": "Becker"
+  },
+  {
+  "name": "Gene",
+  "surname": "Conway"
+  },
+  {
+  "name": "Molly",
+  "surname": "Petersen"
+  },
+  {
+  "name": "Jerry",
+  "surname": "Casey"
+  },
+  {
+  "name": "Jacob",
+  "surname": "Summers"
+  },
+  {
+  "name": "Tamara",
+  "surname": "Connor"
+  },
+  {
+  "name": "Erin",
+  "surname": "Nichols"
+  },
+  {
+  "name": "Michelle",
+  "surname": "Dunn"
+  },
+  {
+  "name": "Cynthia",
+  "surname": "Sutherland"
+  },
+  {
+  "name": "Brian",
+  "surname": "Burton"
+  },
+  {
+  "name": "Melanie",
+  "surname": "Reed"
+  },
+  {
+  "name": "Audrey",
+  "surname": "Bray"
+  },
+  {
+  "name": "Carrie",
+  "surname": "Davis"
+  },
+  {
+  "name": "Alex",
+  "surname": "Duke"
+  },
+  {
+  "name": "Lester",
+  "surname": "Sawyer"
+  },
+  {
+  "name": "Kyle",
+  "surname": "Barbour"
+  },
+  {
+  "name": "Kate",
+  "surname": "Kent"
+  },
+  {
+  "name": "Annette",
+  "surname": "Walters"
+  },
+  {
+  "name": "Geraldine",
+  "surname": "Stephens"
+  },
+  {
+  "name": "James",
+  "surname": "Hendricks"
+  },
+  {
+  "name": "Catherine",
+  "surname": "Harrell"
+  },
+  {
+  "name": "Vernon",
+  "surname": "Davies"
+  },
+  {
+  "name": "Vivian",
+  "surname": "Davidson"
+  },
+  {
+  "name": "Glen",
+  "surname": "Kirby"
+  },
+  {
+  "name": "Steve",
+  "surname": "Coley"
+  },
+  {
+  "name": "Eugene",
+  "surname": "Parks"
+  },
+  {
+  "name": "Alan",
+  "surname": "Sanchez"
+  },
+  {
+  "name": "Eva",
+  "surname": "Murphy"
+  },
+  {
+  "name": "Regina",
+  "surname": "Anderson"
+  },
+  {
+  "name": "Johnny",
+  "surname": "Best"
+  },
+  {
+  "name": "Audrey",
+  "surname": "Maynard"
+  }
+]}
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      var calendarEl = document.getElementById('calendar');
+  
+      var calendar = new FullCalendar.Calendar(calendarEl, {
+        schedulerLicenseKey: 'GPL-My-Project-Is-Open-Source',
+        plugins: [ 'interaction', 'resourceDayGrid', 'resourceTimeGrid' ],
+        defaultView: 'resourceTimeGridDay',
+        defaultDate: '2019-10-24',
+        editable: true,
+        selectable: true,
+        eventLimit: true, // allow "more" link when too many events
+        weekends: true,
+        nowIndicator: true,
+        // slotDuration: '00:10:00',
+        header: {
+          left: 'prev,next today',
+          center: 'title',
+          right: 'resourceTimeGridDay,resourceTimeGridTwoDay,timeGridWeek,dayGridMonth'
+        },
+        views: {
+          resourceTimeGridTwoDay: {
+            type: 'resourceTimeGrid',
+            duration: { days: 2 },
+            buttonText: '2 days',
+          }
+        },
+        businessHours: [
+          {
+            daysOfWeek: [ 1, 2, 3, 4, 5 ],
+            startTime: '08:00',
+            endTime: '18:00',
+          },
+          {
+            daysOfWeek: [ 0, 6 ],
+            startTime: '08:00',
+            endTime: '13:00',
+          },
+        ],
+  
+        //// uncomment this line to hide the all-day slot
+        //allDaySlot: false,
+  
+        resources: [
+          { id: 'a', title: 'Alice M' },
+          { id: 'b', title: 'Bob N', eventColor: '#40c0ff' },
+          { id: 'c', title: 'Charlie O', eventColor: 'orange' },
+          { id: 'd', title: 'Donna P', eventColor: 'lime',
+            businessHours: {
+              startTime: '12:00',
+              endTime: '22:00'
+            }
+          }
+        ],
+        events: [
+          // background event, associated with a resource
+          { id: 'bg1', resourceId: 'a', rendering: 'background', start: '2019-10-23T01:00:00', end: '2019-10-25T04:00:00', color: '#808080' },
+  
+          // background event, NOT associated with a resource
+          // { id: 'bg2', rendering: 'background', start: '2019-10-25T16:00:00', end: '2019-10-25T18:00:00', title: 'training' },
+
+          // all day events        
+          { id: '1', resourceId: 'a', start: '2019-10-23', end: '2019-10-25', title: 'Vacation', backgroundColor: '#808080' },
+
+          // nomral events
+          // { id: '2', resourceId: 'b', start: '2019-10-24T09:00:00', end: '2019-10-24T14:00:00', title: 'event 2', borderColor: '#000000' },
+        ],
+  
+        select: function(arg) {
+          console.log(
+            'select',
+            arg.startStr,
+            arg.endStr,
+            arg.resource ? arg.resource.id : '(no resource)'
+          );
+        },
+        dateClick: function(arg) {
+          console.log(
+            'dateClick',
+            arg.date,
+            arg.resource ? arg.resource.id : '(no resource)'
+          );
+        }
+      });
+
+      //Add fake events
+      const sDur = 20;
+      const lDur = 60;
+      for (let a=1; a<=3; a++) {
+
+        for (let i=(a==3 ? 1200 : 800); i<(a==3 ? 2200 : 1800); i+=sDur) {
+          if (i%100<60) {   //ignore anything greater than 60, i.e. treat i as minutes
+            let r  =  Math.floor(Math.random() * 3);  //probability of a gap between appointments
+            let r2 =  Math.floor(Math.random() * 5);  //probability of a long appointment
+            console.log(r);
+            if (r>0) {
+              let m = i%100;
+              let h = (i-m)/100;
+              // console.log ('i:' + i + ', h:' + h + ', m:' + m);
+              let s = new Date('2019-10-24T' + (h<10 ? "0" : "") + h + ':' + (m<10 ? "0" : "") + m + ':00');
+              m += r2==0 ? lDur : sDur;
+              if (m >= 60) { m -= 60; h++; }
+              let e = new Date('2019-10-24T' + (h<10 ? "0" : "") + h + ':' + (m<10 ? "0" : "") + m + ':00');
+              if (r2==0) {
+                i = h*100 + m - sDur;
+              }
+              
+              r = Math.floor(Math.random() * 99);
+              let f = fakeNames.items[r].name;
+              r = Math.floor(Math.random() * 99);
+              let l = fakeNames.items[r].surname;
+              let b = (r2==0) ? "'#000000'" : "";
+              let x = a==1 ? 'b' : a==2 ? 'c' : 'd';
+              calendar.addEvent({
+                borderColor: b,
+                title: f + " " + l,
+                resourceId: x,
+                start: s,
+                end: e
+              });
+            }
+          }
+        }
+
+      }
+
+      calendar.render();
+    });
+  </script>
+</head>
+
+<body class="">
+  <div class="wrapper ">
+    <div class="sidebar" data-color="green" data-active-color="success">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red | yellow"
+    -->
+      <div class="logo">
+        <a href="http://www.healthchain.ca" class="simple-text logo-mini">
+          <div class="logo-image-small">
+            <img src="../assets/img/marijuanaleaf.png">
+          </div>
+        </a>
+        <a href="http://www.healthchain.ca" class="simple-text logo-normal">
+          CanScripts
+          <!-- <div class="logo-image-big">
+            <img src="../assets/img/logo-big.png">
+          </div> -->
+        </a>
+      </div>
+      <div class="sidebar-wrapper">
+        <ul class="nav">
+          <li>
+            <a href="./dashboard.html">
+              &nbsp;<img src="../assets/img/dashboard.png" width=30 height=30 style="filter: invert(70%);">&nbsp;&nbsp;&nbsp;
+              Dashboard
+            </a>
+          </li>
+          <li>
+            <a href="./prescribe.html">
+              &nbsp;<img src="../assets/img/prescribe.png" width=30 height=30 style="filter: invert(70%);">&nbsp;&nbsp;&nbsp;
+              Prescribe
+            </a>
+          </li>
+          <li>
+            <a href="./videoconf.html">
+              &nbsp;<img src="../assets/img/videoconf.png" width=30 height=30 style="filter: invert(70%);">&nbsp;&nbsp;&nbsp;
+              Video consult
+            </a>
+          </li>
+          <li>
+            <a href="./onboard.html">
+              &nbsp;<img src="../assets/img/onboard.png" width=30 height=30 style="filter: invert(70%);">&nbsp;&nbsp;&nbsp;
+              Patient profile
+            </a>
+          </li>
+          <li class="active ">
+            <a href="./schedule.html">
+              &nbsp;<img src="../assets/img/schedule.png" width=30 height=30 style="filter: invert(70%);">&nbsp;&nbsp;&nbsp;
+              Scheduling
+            </a>
+          </li>
+          <li>
+            <a href="./settings.html">
+              &nbsp;<img src="../assets/img/settings.png" width=30 height=30 style="filter: invert(70%);">&nbsp;&nbsp;&nbsp;
+              Configure
+            </a>
+          </li>
+          <li class="active-pro">
+            <a href="http://www.healthchain.ca">
+              <img src="../assets/img/hclogo.png" width=40 height=20 style="filter: grayscale(100%);">&nbsp;&nbsp;
+              <span style="font-size: 10px;">Powered by HealthChain</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute fixed-top navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="#pablo">Dashboard for Oct 24, 2019</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation-index" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse justify-content-end" id="navigation">
+            <form>
+              <div class="input-group no-border">
+                <input type="text" value="" class="form-control" placeholder="Lookup patient...">
+                <div class="input-group-append">
+                  <div class="input-group-text">
+                    <i class="nc-icon nc-zoom-split"></i>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link btn-magnify" href="#HealthChain">
+                  <i class="nc-icon nc-layout-11"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Stats</span>
+                  </p>
+                </a>
+              </li>
+              <li class="nav-item btn-rotate dropdown">
+                <a class="nav-link dropdown-toggle" href="http://www.healthchain.ca" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  <i class="nc-icon nc-bell-55"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">Rx pipeline</span>
+                  </p>
+                </a>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdownMenuLink">
+                  <a class="dropdown-item" href="#">Patient unanswered messages (7)</a>
+                  <a class="dropdown-item" href="#">Patients to be scheduled (4)</a>
+                  <a class="dropdown-item" href="#">Doctor referrals to be processed (2)</a>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link btn-rotate" href="#HealthChain">
+                  <i class="nc-icon nc-settings-gear-65"></i>
+                  <p>
+                    <span class="d-lg-none d-md-block">HealthChain settings</span>
+                  </p>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- End Navbar -->
+      <!-- <div class="panel-header panel-header-lg">
+
+  <canvas id="bigDashboardChart"></canvas>
+
+
+</div> -->
+      <div class="content">
+        <div class="row">
+<!-- START: Main Body -->
+
+          <div id='calendar'></div>
+
+<!-- END: Main Body -->
+        </div>
+
+      <!-- <footer class="footer footer-black  footer-white ">
+        <div class="container-fluid">
+          <div class="row">
+            <nav class="footer-nav">
+              <ul>
+                <li>
+                  <a href="https://www.healthchain.ca" target="_blank">HealthChain</a>
+                </li>
+                <li>
+                  <a href="https://www.healthchain.ca" target="_blank">Blog</a>
+                </li>
+                <li>
+                  <a href="https://www.healthchain.ca" target="_blank">Licenses</a>
+                </li>
+              </ul>
+            </nav>
+            <div class="credits ml-auto">
+              <span class="copyright">
+                ©
+                <script>
+                  document.write(new Date().getFullYear())
+                </script>, HealthChain Inc.
+              </span>
+            </div>
+          </div>
+        </div>
+      </footer> -->
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="../assets/js/core/jquery.min.js"></script>
+  <script src="../assets/js/core/popper.min.js"></script>
+  <script src="../assets/js/core/bootstrap.min.js"></script>
+  <script src="../assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="../assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="../assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Now Ui Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="../assets/js/paper-dashboard.min.js?v=2.0.0" type="text/javascript"></script>
+  <!-- Paper Dashboard DEMO methods, don't include it in your project! -->
+  <script src="../assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      // Javascript method's body can be found in assets/assets-for-demo/js/demo.js
+      demo.initChartsPages();
+    });
+  </script>
+</body>
+
+</html>

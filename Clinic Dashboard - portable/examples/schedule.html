@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang=en>
+<meta charset=utf-8>
+<link href=../assets/img/apple-icon.png rel=apple-touch-icon sizes=76x76>
+<link href=../assets/img/favicon.png rel=icon type=image/png> <meta content="IE=edge,chrome=1"
+  http-equiv=X-UA-Compatible>
+<title>LP Dashboard by HealthChain</title>
+<meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0,shrink-to-fit=no" name=viewport>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700,200" rel=stylesheet>
+<link href=https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css rel=stylesheet>
+<link href=../assets/css/bootstrap.min.css rel=stylesheet>
+<link href="../assets/css/pa.css?v=2.0.0" rel=stylesheet>
+<link href=../assets/demo/demo.css rel=stylesheet>
+<link href=../fullcalendar-scheduler-4.3.1/packages/core/main.css rel=stylesheet>
+<link href=../fullcalendar-scheduler-4.3.1/packages/daygrid/main.css rel=stylesheet>
+<link href=../fullcalendar-scheduler-4.3.1/packages/timegrid/main.css rel=stylesheet>
+<script src=../fullcalendar-scheduler-4.3.1/packages/core/main.js> </script> <script
+  src=../fullcalendar-scheduler-4.3.1/packages/interaction/main.js> </script> <script
+  src=../fullcalendar-scheduler-4.3.1/packages/daygrid/main.js> </script> <script
+  src=../fullcalendar-scheduler-4.3.1/packages/timegrid/main.js> </script> <script
+  src=../fullcalendar-scheduler-4.3.1/packages-premium/resource-common/main.js> </script> <script
+  src=../fullcalendar-scheduler-4.3.1/packages-premium/resource-daygrid/main.js> </script> <script
+  src=../fullcalendar-scheduler-4.3.1/packages-premium/resource-timegrid/main.js> </script> <script>
+    const fakeNames = { items: [{ name: "Sandy", surname: "Jenkins" }, { name: "Vanessa", surname: "Puckett" }, { name: "Ricky", surname: "Freedman" }, { name: "Barry", surname: "Bowling" }, { name: "Leo", surname: "Hewitt" }, { name: "Florence", surname: "Waters" }, { name: "Mary", surname: "Dunlap" }, { name: "Ross", surname: "Dillon" }, { name: "Bob", surname: "Rowland" }, { name: "Rhonda", surname: "Graham" }, { name: "Sherri", surname: "Stanley" }, { name: "Steve", surname: "Gilbert" }, { name: "Tom", surname: "Chang" }, { name: "Glenda", surname: "Sawyer" }, { name: "Allen", surname: "Cash" }, { name: "Gilbert", surname: "Waller" }, { name: "Bonnie", surname: "Desai" }, { name: "Shannon", surname: "Cates" }, { name: "Charlotte", surname: "Aldridge" }, { name: "Bob", surname: "Monroe" }, { name: "Jordan", surname: "Hawkins" }, { name: "Ashley", surname: "Bolton" }, { name: "Caroline", surname: "Carroll" }, { name: "Randall", surname: "Anderson" }, { name: "Gregory", surname: "Raynor" }, { name: "Calvin", surname: "Brennan" }, { name: "Jerome", surname: "Graves" }, { name: "Jack", surname: "Love" }, { name: "Hannah", surname: "Abrams" }, { name: "Brooke", surname: "Waller" }, { name: "Martha", surname: "Justice" }, { name: "Dan", surname: "Harrell" }, { name: "Glen", surname: "Blanchard" }, { name: "Karen", surname: "Gray" }, { name: "Harvey", surname: "Gibson" }, { name: "Vivian", surname: "Blair" }, { name: "Jon", surname: "Ford" }, { name: "Martin", surname: "Coates" }, { name: "Gretchen", surname: "Pitts" }, { name: "Kelly", surname: "Clements" }, { name: "Calvin", surname: "Lowry" }, { name: "Wesley", surname: "Richmond" }, { name: "Martha", surname: "Norman" }, { name: "Guy", surname: "Scarborough" }, { name: "Hannah", surname: "Katz" }, { name: "Beth", surname: "McGuire" }, { name: "Danny", surname: "Barton" }, { name: "Gina", surname: "Burgess" }, { name: "Vivian", surname: "Hardison" }, { name: "Walter", surname: "Lin" }, { name: "Stephen", surname: "McNamara" }, { name: "Barbara", surname: "Roth" }, { name: "Glenn", surname: "Lawrence" }, { name: "Clifford", surname: "Nance" }, { name: "Wesley", surname: "Haynes" }, { name: "Scott", surname: "Holland" }, { name: "Erica", surname: "Horowitz" }, { name: "Regina", surname: "Hensley" }, { name: "Gloria", surname: "Hendrix" }, { name: "Mike", surname: "Jernigan" }, { name: "Dan", surname: "Bowles" }, { name: "Lloyd", surname: "Owen" }, { name: "Nathan", surname: "Vaughn" }, { name: "Jeff", surname: "Hu" }, { name: "Jordan", surname: "Marsh" }, { name: "Gilbert", surname: "Stephens" }, { name: "Martha", surname: "Robinson" }, { name: "Brooke", surname: "Scarborough" }, { name: "Caroline", surname: "Wagner" }, { name: "Dennis", surname: "Becker" }, { name: "Gene", surname: "Conway" }, { name: "Molly", surname: "Petersen" }, { name: "Jerry", surname: "Casey" }, { name: "Jacob", surname: "Summers" }, { name: "Tamara", surname: "Connor" }, { name: "Erin", surname: "Nichols" }, { name: "Michelle", surname: "Dunn" }, { name: "Cynthia", surname: "Sutherland" }, { name: "Brian", surname: "Burton" }, { name: "Melanie", surname: "Reed" }, { name: "Audrey", surname: "Bray" }, { name: "Carrie", surname: "Davis" }, { name: "Alex", surname: "Duke" }, { name: "Lester", surname: "Sawyer" }, { name: "Kyle", surname: "Barbour" }, { name: "Kate", surname: "Kent" }, { name: "Annette", surname: "Walters" }, { name: "Geraldine", surname: "Stephens" }, { name: "James", surname: "Hendricks" }, { name: "Catherine", surname: "Harrell" }, { name: "Vernon", surname: "Davies" }, { name: "Vivian", surname: "Davidson" }, { name: "Glen", surname: "Kirby" }, { name: "Steve", surname: "Coley" }, { name: "Eugene", surname: "Parks" }, { name: "Alan", surname: "Sanchez" }, { name: "Eva", surname: "Murphy" }, { name: "Regina", surname: "Anderson" }, { name: "Johnny", surname: "Best" }, { name: "Audrey", surname: "Maynard" }] }; document.addEventListener("DOMContentLoaded", function () { var a = document.getElementById("calendar"), c = new FullCalendar.Calendar(a, { schedulerLicenseKey: "GPL-My-Project-Is-Open-Source", plugins: ["interaction", "resourceDayGrid", "resourceTimeGrid"], defaultView: "resourceTimeGridDay", defaultDate: "2019-10-24", editable: !0, selectable: !0, eventLimit: !0, weekends: !0, nowIndicator: !0, header: { left: "prev,next today", center: "title", right: "resourceTimeGridDay,resourceTimeGridTwoDay,timeGridWeek,dayGridMonth" }, views: { resourceTimeGridTwoDay: { type: "resourceTimeGrid", duration: { days: 2 }, buttonText: "2 days" } }, businessHours: [{ daysOfWeek: [1, 2, 3, 4, 5], startTime: "08:00", endTime: "18:00" }, { daysOfWeek: [0, 6], startTime: "08:00", endTime: "13:00" }], resources: [{ id: "a", title: "Alice M" }, { id: "b", title: "Bob N", eventColor: "#40c0ff" }, { id: "c", title: "Charlie O", eventColor: "orange" }, { id: "d", title: "Donna P", eventColor: "lime", businessHours: { startTime: "12:00", endTime: "22:00" } }], events: [{ id: "bg1", resourceId: "a", rendering: "background", start: "2019-10-23T01:00:00", end: "2019-10-25T04:00:00", color: "#808080" }, { id: "1", resourceId: "a", start: "2019-10-23", end: "2019-10-25", title: "Vacation", backgroundColor: "#808080" }], select: function (a) { console.log("select", a.startStr, a.endStr, a.resource ? a.resource.id : "(no resource)") }, dateClick: function (a) { console.log("dateClick", a.date, a.resource ? a.resource.id : "(no resource)") } }); const d = 20; for (let g = 1; 3 >= g; g++)for (let a = 3 == g ? 1200 : 800; a < (3 == g ? 2200 : 1800); a += d)if (60 > a % 100) { let i = Math.floor(3 * Math.random()), j = Math.floor(5 * Math.random()); if (console.log(i), 0 < i) { let k = a % 100, m = (a - k) / 100, h = new Date("2019-10-24T" + (10 > m ? "0" : "") + m + ":" + (10 > k ? "0" : "") + k + ":00"); k += 0 == j ? 60 : d, 60 <= k && (k -= 60, m++); let n = new Date("2019-10-24T" + (10 > m ? "0" : "") + m + ":" + (10 > k ? "0" : "") + k + ":00"); 0 == j && (a = 100 * m + k - d), i = Math.floor(99 * Math.random()); let e = fakeNames.items[i].name; i = Math.floor(99 * Math.random()); let f = fakeNames.items[i].surname, l = 0 == j ? "'#000000'" : "", b = 1 == g ? "b" : 2 == g ? "c" : "d"; c.addEvent({ borderColor: l, title: e + " " + f, resourceId: b, start: h, end: n }) } } c.render() });
+  </script>
+<div class=wrapper>
+  <div class=sidebar data-active-color=success data-color=green>
+    <div class=logo><a href=http://www.healthchain.ca class="simple-text logo-mini">
+        <div class=logo-image-small><img src=../assets/img/marijuanaleaf.png> </div> </a> <a
+            href=http://www.healthchain.ca class="simple-text logo-normal">CanScripts
+      </a></div>
+    <div class=sidebar-wrapper>
+      <ul class=nav>
+        <li><a href=./dashboard.html>  <img src=../assets/img/dashboard.png height=30 style=filter:invert(70%)
+            width=30>    Dashboard</a>
+        <li><a href=./prescribe.html>  <img src=../assets/img/prescribe.png height=30 style=filter:invert(70%)
+            width=30>    Prescribe</a>
+        <li><a href=./videoconf.html>  <img src=../assets/img/videoconf.png height=30 style=filter:invert(70%)
+            width=30>    Video consult</a>
+        <li><a href=./onboard.html>  <img src=../assets/img/onboard.png height=30 style=filter:invert(70%) width=30>   
+            Patient profile</a>
+        <li class=active><a href=./schedule.html>  <img src=../assets/img/schedule.png height=30
+            style=filter:invert(70%) width=30>    Scheduling</a>
+        <li><a href=./settings.html>  <img src=../assets/img/settings.png height=30 style=filter:invert(70%)
+            width=30>    Configure</a>
+        <li class=active-pro><a href=http://www.healthchain.ca> <img src=../assets/img/hclogo.png height=20
+            style=filter:grayscale(100%) width=40>   <span style=font-size:10px>Powered by HealthChain</span></a>
+      </ul>
+    </div>
+  </div>
+  <div class=main-panel>
+    <nav class="fixed-top navbar navbar-absolute navbar-expand-lg navbar-transparent">
+      <div class=container-fluid>
+        <div class=navbar-wrapper>
+          <div class=navbar-toggle><button class=navbar-toggler type=button><span
+                class="navbar-toggler-bar bar1"></span> <span class="navbar-toggler-bar bar2"></span> <span
+                class="navbar-toggler-bar bar3"></span></button></div><a href=#pablo class=navbar-brand>Dashboard for
+            Oct 24, 2019</a>
+        </div><button class=navbar-toggler type=button aria-controls=navigation-index aria-expanded=false
+          aria-label="Toggle navigation" data-target=#navigation data-toggle=collapse><span
+            class="navbar-toggler-bar navbar-kebab"></span> <span class="navbar-toggler-bar navbar-kebab"></span> <span
+            class="navbar-toggler-bar navbar-kebab"></span></button>
+        <div class="collapse justify-content-end navbar-collapse" id=navigation>
+          <form>
+            <div class="input-group no-border"><input class=form-control placeholder="Lookup patient...">
+              <div class=input-group-append>
+                <div class=input-group-text><i class="nc-icon nc-zoom-split"></i></div>
+              </div>
+            </div>
+          </form>
+          <ul class=navbar-nav>
+            <li class=nav-item><a href=#HealthChain class="nav-link btn-magnify"><i class="nc-icon nc-layout-11"></i>
+                <p><span class="d-lg-none d-md-block">Stats</span></p>
+              </a>
+            <li class="nav-item btn-rotate dropdown"><a href=http://www.healthchain.ca class="nav-link dropdown-toggle"
+                aria-expanded=false aria-haspopup=true data-toggle=dropdown id=navbarDropdownMenuLink><i
+                  class="nc-icon nc-bell-55"></i>
+                <p><span class="d-lg-none d-md-block">Rx pipeline</span></p>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right" aria-labelledby=navbarDropdownMenuLink><a href=#
+                  class=dropdown-item>Patient unanswered messages (7)</a> <a href=# class=dropdown-item>Patients to be
+                  scheduled (4)</a> <a href=# class=dropdown-item>Doctor referrals to be processed (2)</a></div>
+            <li class=nav-item><a href=#HealthChain class="nav-link btn-rotate"><i
+                  class="nc-icon nc-settings-gear-65"></i>
+                <p><span class="d-lg-none d-md-block">HealthChain settings</span></p>
+              </a>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class=content>
+      <div class=row>
+        <div id=calendar></div>
+      </div>
+    </div>
+  </div>
+  <script src=../assets/js/core/jquery.min.js> </script> <script src=../assets/js/core/popper.min.js> </script> <script
+    src=../assets/js/core/bootstrap.min.js> </script> <script src=../assets/js/plugins/perfect-scrollbar.jquery.min.js>
+    </script> <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <script src=../assets/js/plugins/chartjs.min.js> </script> <script src=../assets/js/plugins/bootstrap-notify.js>
+  </script> <script src="../assets/js/pa.min.js?v=2.0.0"></script>
+  <script src=../assets/demo/demo.js> </script>
+    <script>$(document).ready(function () { demo.initChartsPages() })</script>
